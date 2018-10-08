@@ -4,29 +4,35 @@ Nesse exercício, você está livre para escolher os nomes para suas variáveis 
 
 ```js
 // Crie uma função que receba dois argumentos e retorne a soma dos mesmos.
-Teste
+function soma(x , y){
+    return x + y;
+}
 
 // Declare uma variável que receba a invocação da função criada acima, passando dois números quaisquer por argumento, e somando `5` ao resultado retornado da função.
-?
+var somadois = soma(1 , 2) + 5;
 
 // Qual o valor atualizado dessa variável?
-?
+> somadois
+8
 
 // Declare uma nova variável, sem valor.
-?
+var somatres = null;
 
 /*
 Crie uma função que adicione um valor à variável criada acima, e retorne a string:
     O valor da variável agora é VALOR.
 Onde VALOR é o novo valor da variável.
 */
-?
+function adicionaValor(){
+    somatres = 3;
+    return 'O valor da variável agora é '+somatres;
+}
 
 // Invoque a função criada acima.
-?
+adicionaValor();
 
 // Qual o retorno da função? (Use comentários de bloco).
-?
+/* 'O valor da variável agora é 3' */
 
 /*
 Crie uma função com as seguintes características:
@@ -35,19 +41,26 @@ Crie uma função com as seguintes características:
     Preencha todos os valores corretamente!
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
-?
+function tresValores(a ,b ,c ){
+    if(a == null || b == null || c == null){
+        return 'Preencha todos os valores corretamente!';
+    } else {
+        return (a * b * c) + 2;
+    }
+    }
+}
 
 // Invoque a função criada acima, passando só dois números como argumento.
-?
+ tresValores(1 , 2);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+// 'Preencha todos os valores corretamente!'
 
 // Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
-?
+tresValores(1 , 2, 3);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+// 8
 
 /*
 Crie uma função com as seguintes características:
