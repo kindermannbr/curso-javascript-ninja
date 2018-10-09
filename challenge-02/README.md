@@ -16,7 +16,8 @@ var somadois = soma(1 , 2) + 5;
 8
 
 // Declare uma nova variável, sem valor.
-var somatres = null;
+var somatres = null; //minha resposta
+var somatres; //resposta do professor
 
 /*
 Crie uma função que adicione um valor à variável criada acima, e retorne a string:
@@ -25,7 +26,7 @@ Onde VALOR é o novo valor da variável.
 */
 function adicionaValor(){
     somatres = 3;
-    return 'O valor da variável agora é '+somatres;
+    return 'O valor da variável agora é '+somatres; //o + está concatenando
 }
 
 // Invoque a função criada acima.
@@ -42,12 +43,20 @@ Crie uma função com as seguintes características:
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
 function tresValores(a ,b ,c ){
-    if(a == null || b == null || c == null){
+    if(a === undefined || b === undefined || c === undefined){
         return 'Preencha todos os valores corretamente!';
     } else {
         return (a * b * c) + 2;
     }
-    }
+}
+
+/* Outra maneira de fazer o exercício acima é conforme abaixo sem o else. Porque no primeiro return ele já ignora o else, sendo assim caso seja um dos valores "undefined" ele já pula pro segundo return */
+
+function tresValores(a ,b ,c ){
+    if(a === undefined || b === undefined || c === undefined){
+        return 'Preencha todos os valores corretamente!';
+    } 
+        return (a * b * c) + 2;
 }
 
 // Invoque a função criada acima, passando só dois números como argumento.
@@ -60,7 +69,7 @@ function tresValores(a ,b ,c ){
 tresValores(1 , 2, 3);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
- 8
+ // 8
 
 /*
 Crie uma função com as seguintes características:
@@ -73,17 +82,33 @@ Crie uma função com as seguintes características:
 */
 
 function decisao(a ,b ,c){
-    if(a != null && b != null && c != null){ //todos tem valor
+    if(a !== undefined && b !== undefined && c !== undefined){ //todos tem valor
         return (a + b) / c;
-    } else if(a == null && b == null && c == null){ //nenhum Tem valor
+    } else if(a === undefined && b === undefined && c === undefined){ //nenhum Tem valor
         return false;
-    } else if(b != null && c == null){ //passagem de dois números
+    } else if(b !== undefined && c === undefined){ //passagem de dois números
         return a + b;
-    } else if(a != null ){ //passagem de um número
+    } else if(a !== undefined ){ //passagem de um número
         return a;
     } else {
-        return null; //item 6
+        return null; //item  6
     }
+}
+
+//Outra maneira de fazer o exercício acima:
+function threeArgs(x, y, z){
+	if( x !== undefined && y === undefined && z === undefined ){
+		return x;
+    } else if( x !== undefined && y !== undefined && z === undefined ){
+		return x + y;
+	} else if( x !== undefined && y !== undefined !== z !== undefined){
+		return ( x + y ) / z;
+	} else if(x === undefined && y === undefined && z === undefined) {
+		return false;
+	} else {
+		return null;
+
+	}
 }
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
