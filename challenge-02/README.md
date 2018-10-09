@@ -60,7 +60,7 @@ function tresValores(a ,b ,c ){
 tresValores(1 , 2, 3);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-// 8
+ 8
 
 /*
 Crie uma função com as seguintes características:
@@ -71,8 +71,33 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-?
+
+function decisao(a ,b ,c){
+    if(a != null && b != null && c != null){ //todos tem valor
+        return (a + b) / c;
+    } else if(a == null && b == null && c == null){ //nenhum Tem valor
+        return false;
+    } else if(b != null && c == null){ //passagem de dois números
+        return a + b;
+    } else if(a != null ){ //passagem de um número
+        return a;
+    } else {
+        return null; //item 6
+    }
+}
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-?
+> decisao() //nenhum  argumento
+false
+
+> decisao(3) //um argumento
+3
+
+> decisao(1,5) //dois argumentos
+6
+
+> decisao(1,2,5) //com todos os valores
+0.6
+
+
 ```
