@@ -207,6 +207,27 @@ pessoa.apresentacao = function(){
     return 'Olá, eu sou '+ genero +' '+ pessoa.nome +' '+ pessoa.sobrenome +', tenho '+ pessoa.idade +' '+ ano +', '+ pessoa.altura +', meu peso é '+ pessoa.peso +' e, só hoje, eu já caminhei '+ pessoa.caminhouQuantosMetros +' '+ qtdMetros +'!';
 }
 
+//Abaixo resposta do professor:
+pessoa.apresentacao = function() {
+    var sexo = 'o'; //já seta um valor para não usar o else
+    var idadeAnos = 'anos'; //já seta um valor para não usar o else
+    var metrosCaminhados = 'metros'; //já seta um valor para não usar o else
+
+    if( pessoa.sexo === 'Feminino' ) {
+        sexo = 'a';
+    }
+
+    if( pessoa.idade === 1) {
+        idadeAnos = 'ano';
+    }
+
+     if( pessoa.caminhouQuantosMetros === 1 ){
+        qtdMetros = 'metro'; 
+    }
+    
+
+}
+
 // Agora, apresente-se ;)
 pessoa.apresentacao();
 /* 'Olá, eu sou o Ricardo Kindermann, tenho 33 anos, 1.7, meu peso é 50 e, só hoje,  eu já caminhei 60 metros!' */
