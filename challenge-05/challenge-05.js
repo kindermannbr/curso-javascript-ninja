@@ -14,7 +14,7 @@ function myFunction(arr) {
 /*
 Imprima o segundo índice do array retornado pela função criada acima.
 */
-myFunction(myArray[1]);
+console.log( myFunction( myArray[1] ) ); //console.log(); serve para imprimir.
 
 /*
 Crie uma função que receba dois parâmetros: o primeiro, um array de valores; e o
@@ -22,18 +22,23 @@ segundo, um número. A função deve retornar o valor de um índice do array que
 no primeiro parâmetro. O índice usado para retornar o valor, deve ser o número passado no
 segundo parâmetro.
 */
-// ?
+var myArrayDois = [ 'num1', 'num2' ];
+function myFunction2( [arr], c ) {
+    return arr[c];
+};
+
+console.log( myFunction2( [myArrayDois], 0 ) );
 
 /*
 Declare uma variável que recebe um array com 5 valores, de tipos diferentes.
 */
-// ?
+var myArrayTres = [1, 'Ricardo', true , function() {} , obj = {} ]
 
 /*
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
 array criado.
 */
-// ?
+console.log( myFunction( myArrayTres ) );
 
 /*
 Crie uma função chamada `book`, que recebe um parâmetro, que será o nome do
@@ -49,12 +54,49 @@ propriedades:
 - Se o parâmetro não for passado, a função deve retornar o objeto com todos
 os livros.
 */
-// ?
+function book( nome_livro ) {
+
+    var livros = {
+        nome1: 'Sítio do Pica Pau Amarelo',
+        propriedades1: {
+                quantidadePaginas: 272,
+                autor: 'Monteiro Lobato',
+                editora: 'Globinho'
+           },
+        nome2: 'Brás Cubas',
+        propriedades2: {
+                quantidadePaginas: 200,
+                autor: 'Machado de Assis',
+                editora: 'Penguin E Companhia Das Letras' 
+        },
+        nome3: 'Scrum',
+        propriedades3: {   
+                quantidadePaginas: 236,
+                autor: 'Sutherland',
+                editora: 'Leya'
+        }                       
+       
+    }
+    if( nome_livro === undefined ) {
+        return  livros;
+    }
+    
+    if ( nome_livro === livros.nome1 ) {
+        return livros.nome1,livros.propriedades1;
+    }
+    if ( nome_livro === livros.nome2 ) {
+        return livros.nome2,livros.propriedades2;
+    }
+    if ( nome_livro === livros.nome3 ) {
+        return livros.nome3,livros.propriedades3;
+    }   
+
+};
 
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
 */
-// ?
+book();
 
 /*
 Ainda com a função acima, imprima a quantidade de páginas de um livro qualquer,
