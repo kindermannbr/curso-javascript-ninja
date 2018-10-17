@@ -56,40 +56,33 @@ os livros.
 */
 function book( nome_livro ) {
 
-    var livros = {
-        nome1: 'Sítio do Pica Pau Amarelo',
-        propriedades1: {
+    var livros = [
+        {
+        nome: 'Sítio do Pica Pau Amarelo',
+        propriedades: {
                 quantidadePaginas: 272,
                 autor: 'Monteiro Lobato',
                 editora: 'Globinho'
            },
-        nome2: 'Brás Cubas',
-        propriedades2: {
+        nome: 'Brás Cubas',
+        propriedades: {
                 quantidadePaginas: 200,
                 autor: 'Machado de Assis',
                 editora: 'Penguin E Companhia Das Letras' 
         },
-        nome3: 'Scrum',
-        propriedades3: {   
+        nome: 'Scrum',
+        propriedades: {   
                 quantidadePaginas: 236,
                 autor: 'Sutherland',
                 editora: 'Leya'
         }                       
        
     }
-    if( nome_livro === undefined ) {
-        return  livros;
-    }
-    
-    if ( nome_livro === livros.nome1 ) {
-        return livros.nome1,livros.propriedades1;
-    }
-    if ( nome_livro === livros.nome2 ) {
-        return livros.nome2,livros.propriedades2;
-    }
-    if ( nome_livro === livros.nome3 ) {
-        return livros.nome3,livros.propriedades3;
-    }   
+]
+
+    livros.forEach(function () {
+        console.log(livros);
+    });
 
 };
 
