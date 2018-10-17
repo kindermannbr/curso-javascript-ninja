@@ -63,25 +63,30 @@ function book( nome_livro ) {
                 quantidadePaginas: 272,
                 autor: 'Monteiro Lobato',
                 editora: 'Globinho'
-           },
+           }
+        },
+        {
         nome: 'Brás Cubas',
         propriedades: {
                 quantidadePaginas: 200,
                 autor: 'Machado de Assis',
                 editora: 'Penguin E Companhia Das Letras' 
+           }
         },
+        {
         nome: 'Scrum',
         propriedades: {   
                 quantidadePaginas: 236,
                 autor: 'Sutherland',
                 editora: 'Leya'
-        }                       
+            }                       
+        }
        
-    }
+    
 ]
 
-    livros.forEach(function () {
-        console.log(livros);
+    livros.forEach(function ( livro ) {
+        console.log(livro);
     });
 
 };
