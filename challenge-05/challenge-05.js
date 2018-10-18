@@ -9,25 +9,26 @@ Crie uma função que receba um array como parâmetro, e retorne esse array.
 */
 function myFunction(arr) {
     return arr;
-};
+} 
 
 /*
 Imprima o segundo índice do array retornado pela função criada acima.
 */
 console.log( myFunction( myArray[1] ) ); //console.log(); serve para imprimir.
 
+//resposta do professor:
+console.log( myFunction (myArray )[1]);
+
 /*
 Crie uma função que receba dois parâmetros: o primeiro, um array de valores; e o
-segundo, um número. A função deve retornar o valor de um índice do array que foi passado
+segundo, um número. A função deve retornar o valor d    e um índice do array que foi passado
 no primeiro parâmetro. O índice usado para retornar o valor, deve ser o número passado no
 segundo parâmetro.
 */
-var myArrayDois = [ 'num1', 'num2' ];
-function myFunction2( [arr], c ) {
-    return arr[c];
-};
 
-console.log( myFunction2( [myArrayDois], 0 ) );
+function myFunction2( arr, index ) {
+    return arr[ index ];
+}
 
 /*
 Declare uma variável que recebe um array com 5 valores, de tipos diferentes.
@@ -38,7 +39,11 @@ var myArrayTres = [1, 'Ricardo', true , function() {} , obj = {} ]
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
 array criado.
 */
-console.log( myFunction( myArrayTres ) );
+console.log( myFunction2( myArrayTres, 0 ) );
+console.log( myFunction2( myArrayTres, 1 ) );
+console.log( myFunction2( myArrayTres, 2 ) );
+console.log( myFunction2( myArrayTres, 3 ) );
+console.log( myFunction2( myArrayTres, 4 ) );
 
 /*
 Crie uma função chamada `book`, que recebe um parâmetro, que será o nome do
@@ -54,7 +59,7 @@ propriedades:
 - Se o parâmetro não for passado, a função deve retornar o objeto com todos
 os livros.
 */
-var book = function( nome_livro ) {
+function book( nome_livro ) {
 
     var livros = [
         {
@@ -97,8 +102,7 @@ var book = function( nome_livro ) {
         )
 
     }
-
-    
+   
      
     /* Outra maneira de criar a função:
     livros.forEach (function(livro) { //forEach faz o loop quantas indices tiver o array
