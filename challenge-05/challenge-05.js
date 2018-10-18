@@ -54,7 +54,7 @@ propriedades:
 - Se o parâmetro não for passado, a função deve retornar o objeto com todos
 os livros.
 */
-function book( nome_livro ) {
+var book = function( nome_livro ) {
 
     var livros = [
         {
@@ -81,14 +81,32 @@ function book( nome_livro ) {
                 editora: 'Leya'
             }                       
         }
-       
-    
-]
+         
+    ]
+    if(nome_livro === undefined){
+        return livros; //preciso do return para pegar as propriedades
+    }
 
-    livros.forEach(function ( livro ) {
-        console.log(livro);
-    });
-
+    livros.forEach (function(livro) { //forEach faz o loop quantas indices tiver o array
+        var livroComparar;
+        if (nome_livro === livro.nome){
+            livroComparar = livro;
+            console.log(livroComparar);
+        } 
+    }    
+    )
+     
+    /* Outra maneira de criar a função:
+    livros.forEach (function(livro) { //forEach faz o loop quantas indices tiver o array
+        var livroComparar;
+        if(nome_livro === undefined){
+            console.log( livro );
+        } else if (nome_livro === livro.nome){
+            livroComparar = livro;
+            console.log(livroComparar);
+        } 
+    }    
+    )*/
 };
 
 /*
@@ -101,18 +119,28 @@ Ainda com a função acima, imprima a quantidade de páginas de um livro qualque
 usando a frase:
 "O livro [NOME_DO_LIVRO] tem [X] páginas!"
 */
-// ?
+var nomeLivro = book()[2].nome;
+var pagina = book()[2].propriedades.quantidadePaginas;
+
+console.log('O livro '+ nomeLivro +' tem '+ pagina +' páginas!');
 
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
 a frase:
 "O autor do livro [NOME_DO_LIVRO] é [AUTOR]."
 */
-// ?
+var nomeLivro = book()[2].nome;
+var autor = book()[2].propriedades.autor;
+
+console.log('O autor do livro '+ nomeLivro +' é '+ autor +'.');
 
 /*
 Ainda com a função acima, imprima o nome da editora de um livro qualquer, usando
 a frase:
 "O livro [NOME_DO_LIVRO] foi publicado pela editora [NOME_DA_EDITORA]."
 */
-// ?
+var nomeLivro = book()[2].nome;
+var editora = book()[2].propriedades.editora;
+
+console.log('O livro '+ nomeLivro +' foi publicado pela editora '+ editora +'.')
+
