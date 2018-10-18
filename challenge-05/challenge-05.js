@@ -85,16 +85,20 @@ var book = function( nome_livro ) {
     ]
     if(nome_livro === undefined){
         return livros; //preciso do return para pegar as propriedades
+    } else {
+
+        livros.forEach (function(livro) { //forEach faz o loop quantas indices tiver o array
+            var livroComparar;
+            if (nome_livro === livro.nome){
+                livroComparar = livro;
+                console.log(livroComparar);
+            } 
+        }    
+        )
+
     }
 
-    livros.forEach (function(livro) { //forEach faz o loop quantas indices tiver o array
-        var livroComparar;
-        if (nome_livro === livro.nome){
-            livroComparar = livro;
-            console.log(livroComparar);
-        } 
-    }    
-    )
+    
      
     /* Outra maneira de criar a função:
     livros.forEach (function(livro) { //forEach faz o loop quantas indices tiver o array
