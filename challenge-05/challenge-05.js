@@ -45,6 +45,11 @@ console.log( myFunction2( myArrayTres, 2 ) );
 console.log( myFunction2( myArrayTres, 3 ) );
 console.log( myFunction2( myArrayTres, 4 ) );
 
+//ou
+myArrayTres.forEach( function (valor){
+    console.log(valor);
+})
+
 /*
 Crie uma função chamada `book`, que recebe um parâmetro, que será o nome do
 livro. Dentro dessa função, declare uma variável que recebe um objeto com as
@@ -117,10 +122,39 @@ function book( nome_livro ) {
     )*/
 };
 
+//resposta do professor:
+
+function book( bookName ){
+    var allBooks = {
+        'Livro1': {
+            quantidadePaginas: 488,
+            autor: 'John',
+            editora: 'Novatec'
+
+        },
+        'Livro2': {
+            quantidadePaginas:  220,
+            autor: 'Bruce',
+            editora: 'Alta'
+        },
+        'Livro3': {
+            quantidadePaginas: 283,
+            autor: 'Erick',
+            editor: 'Bookman'
+        }
+    };
+
+return !bookName ? allBooks : allBooks[ bookName ]; //verifica se o bookName é vazio !bookName; se for vdd que o bookName for falso, ele irá mostrar todos os livros. É necessário usar os colchetes [ bookName ], pois está buscando a referência, semelhante a um array.
+}
+
+
+
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
 */
 book();
+//Resposta do professor:
+console.log(book());
 
 /*
 Ainda com a função acima, imprima a quantidade de páginas de um livro qualquer,
@@ -129,8 +163,13 @@ usando a frase:
 */
 var nomeLivro = book()[2].nome;
 var pagina = book()[2].propriedades.quantidadePaginas;
-
 console.log('O livro '+ nomeLivro +' tem '+ pagina +' páginas!');
+
+//resposta do professor:
+var bookName = 'Livro1';
+console.log('O livro '+ bookName +' tem '+ book(bookName).quantidadePaginas +' páginas!');
+
+
 
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
@@ -139,8 +178,12 @@ a frase:
 */
 var nomeLivro = book()[2].nome;
 var autor = book()[2].propriedades.autor;
-
 console.log('O autor do livro '+ nomeLivro +' é '+ autor +'.');
+
+//resposta do professor:
+
+console.log('O autor do livro '+ bookName +' é '+ book(bookName).autor +'.');
+
 
 /*
 Ainda com a função acima, imprima o nome da editora de um livro qualquer, usando
@@ -149,6 +192,8 @@ a frase:
 */
 var nomeLivro = book()[2].nome;
 var editora = book()[2].propriedades.editora;
-
 console.log('O livro '+ nomeLivro +' foi publicado pela editora '+ editora +'.')
+
+//resposta do professor:
+console.log('O autor do livro '+ bookName +' é '+ book(bookName).editora +'.');
 
