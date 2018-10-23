@@ -7,8 +7,8 @@ var arr = [ 1, 'texto', null, {nome: 'Ricardo'}, [1, 2, 3] ];
 Crie uma função chamada `addItem`, que irá adicionar itens no array criado.
 A função deverá retornar o array atualizado.
 */
-function addItem(param) {
-    arr.push(param);
+function addItem(item) {
+    arr.push(item);
     return arr;
 };
 
@@ -16,7 +16,7 @@ function addItem(param) {
 Adicione um novo array ao array criado no início do desafio, com ao menos 3
 itens de tipos diferentes, mostrando o resultado no console.
 */
-console.log( addItem([6, 'num', {sobrenome:'Kindermann'}]) );
+console.log( addItem( [6, 'num', {sobrenome:'Kindermann'}]) );
 
 /*
 Mostre no console o segundo elemento desse último array, criado acima, com a
@@ -49,6 +49,11 @@ while(num <= 20 ){
         numPar.push(num);
     }
     num++;
+    /* reposta do professor:
+    num % 2 === 0 ? console.log(num) : '';
+    num++; 
+    
+    na resposta do professor, não tem o console.log abaixo*/
 };
 console.log( 'Números pares entre 10 e 20: ' + numPar);
 
@@ -65,6 +70,11 @@ while(num <= 20){
         numImpar.push(num);
     }
     num++;
+     /* reposta do professor:
+    num % 2 == 0 ? console.log(num) : '';
+    num++; 
+    
+    na resposta do professor, não tem o console.log abaixo*/
 };
 console.log( 'Números ímpares entre 10 e 20: '+ numImpar );
 
@@ -80,6 +90,11 @@ for(var num= 100 ; num <= 120; num++){
     if(num % 2 === 0){
         numPar.push(num);
     } 
+     /* reposta do professor:
+    num % 2 === 0 ? console.log(num) : '';
+    num++; 
+
+    na resposta do professor, não tem o console.log abaixo*/
 };
 console.log( 'Números pares entre 100 e 120: '+ numPar );
 // ?
@@ -89,6 +104,11 @@ for(var num = 111; num <= 125; num++){
     if(num % 2 !== 0){
         numImpar.push(num);
     }
+      /* reposta do professor:
+    num % 2 !== 0 ? console.log(num) : '';
+    num++; 
+
+    na resposta do professor, não tem o console.log abaixo*/
 };
 console.log( 'Números ímpares entre 111 e 125: '+ numImpar );
 // ?
