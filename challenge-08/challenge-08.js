@@ -16,7 +16,11 @@ var valor1 = 1;
 var valor2 = 2;
 var resultado = sum(valor1 , valor2);
 
-console.log('A soma de ${valor1} e ${valor2} é igual a ${resultado}.');
+console.log(resultado);
+
+console.log(`A soma de ${valor1} e ${valor2} é igual a ${resultado}.`); //necessário usar "crase" ` ` no início e no fim para usar ${} dentro.
+
+//exemplo: console.log(`Olá esse é um "exemplo" i'm `);
 
 /*
 Mostre no console o nome da função criada acima, com a frase:
@@ -30,7 +34,7 @@ seu nome.
 */
 
 
-}
+
 
 /*
 Declare uma variável chamada `varShowName` que recebe a função criada acima.
