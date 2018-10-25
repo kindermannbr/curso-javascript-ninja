@@ -16,8 +16,6 @@ var valor1 = 1;
 var valor2 = 2;
 var resultado = sum(valor1 , valor2);
 
-console.log(resultado);
-
 console.log(`A soma de ${valor1} e ${valor2} é igual a ${resultado}.`); //necessário usar "crase" ` ` no início e no fim para usar ${} dentro.
 
 //exemplo: console.log(`Olá esse é um "exemplo" i'm `);
@@ -26,27 +24,32 @@ console.log(`A soma de ${valor1} e ${valor2} é igual a ${resultado}.`); //neces
 Mostre no console o nome da função criada acima, com a frase:
 "O nome da função que faz a soma é [NOME DA FUNÇÃO]."
 */
-console.log('O nome da função que faz a soma é '+ sum +'.');
+
+console.log(sum);
 
 /*
 Crie uma função literal chamada `showName`. Essa função deve retornar o
 seu nome.
 */
 
-
+function showName(){
+    return showName;
+}
+console.log(showName);
 
 
 /*
 Declare uma variável chamada `varShowName` que recebe a função criada acima.
 */
-// ?
+var varShowName = showName();
+console.log(varShowName);
 
 /*
 Usando a variável criada acima, mostre no console o nome e o retorno da função
 atribuída a ela, com a seguinte frase:
 "A função [NOME DA FUNÇÃO] retorna [RETORNO DA FUNÇÃO]."
 */
-// ?
+console.log();
 
 /*
 Crie uma função literal chamada `calculator`, que funcione assim:
@@ -60,7 +63,12 @@ vai efetuar. Será uma string com os valores `+`, `-`, `*`, `/` ou `%`;
   - Se o operador não for válido, retornar a frase:
   "Operação inválida."
 */
-// ?
+function calculator(operador){
+    return function (num1 , num2){
+        
+        return `Resultado da operação: [NUMERO1] [OPERADOR] [NUMERO2] = [RESULTADO].`;
+    }
+}
 
 /*
 Declare uma variável chamada `sum`, que receberá a função acima, passando como
